@@ -324,13 +324,13 @@ header nav .contacto-btn:hover {
     }
 /* --------------------------HEADER-------------------------------------------------------------------------------------- */  
   header nav {
-    position: relative;
+    position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
     flex-direction: column;
     background-color: #000;
-    display: flex;
+    display: none;
     padding: 20px 0;
     text-align: center;
     gap: 15px;
@@ -509,7 +509,7 @@ nav a:hover {
   }
 
   .menu-toggle {
-    display: none;
+    display: block;
   }
 }
 
@@ -558,7 +558,7 @@ nav a:hover {
 #contacto {
   background: linear-gradient(to right, #1e1e2f, #3a0ca3); /* gris violáceo → violeta oscuro */
   color: #fff;
-  padding: 90px 20px;
+  padding: 80px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
@@ -683,28 +683,6 @@ main {
 }
 
 
-/* ==== Ajuste de proporción y alineación de textos en cartas ==== */
-#nuestros-servicios .carta {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* alineación superior */
-  align-items: center;
-  text-align: center;
-  min-height: 420px; /* altura uniforme */
-}
-
-#nuestros-servicios .carta h3 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-#nuestros-servicios .carta p {
-  font-size: 1.05em;
-  line-height: 1.6em;
-  margin-top: auto;   /* hace que el párrafo siempre quede alineado */
-}
- 
 
 /* Estilos específicos para el ítem de GitHub */
 .contacto-item.github-item {
@@ -726,3 +704,87 @@ main {
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
