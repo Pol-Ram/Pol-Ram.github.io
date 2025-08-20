@@ -703,6 +703,32 @@ main {
 }
 
 
+
+
+/* ==== Ajuste de proporción y alineación de textos en cartas ==== */
+#nuestros-servicios .carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* alineación superior */
+  align-items: center;
+  text-align: center;
+  min-height: 420px; /* altura uniforme */
+}
+
+#nuestros-servicios .carta h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#nuestros-servicios .carta p {
+  font-size: 1.05em;
+  line-height: 1.6em;
+  margin-top: auto;   /* hace que el párrafo siempre quede alineado */
+}
+ 
+
+ 
  
 
 
