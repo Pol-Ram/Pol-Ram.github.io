@@ -1,0 +1,728 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+}
+
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{font-size: 1.25em;}
+
+button{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color:white;
+    background-color: #00aced;
+}
+
+button:hover{
+    background-color: #227a9b;
+}
+
+
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+.color-acento{color: #00aced;}
+
+/* --------------------------HEADER-------------------------------------------------------------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  position: sticky;
+  padding: 2px 0;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .logo {
+  font-size: large;
+  font-weight: bold;
+  color: #00aced;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* igual para todos */
+  padding: 0 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+header nav a:hover {
+  color: #00aced;
+}
+
+/* Botón especial "Contacto" */
+header nav .contacto-btn {
+  background-color: #00aced;
+  color: #000;
+}
+
+header nav .contacto-btn:hover {
+  background-color: #008bb9;
+  color: #fff;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+
+.section-title {
+  text-align: center;
+  font-size: 4em;
+  margin: 0.8em 0 0.4em 0;
+  color: #0a1f44; /* Azul oscuro elegante */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Contraste suave */
+  animation: fadeInUp 0.9s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+
+#nuestros-servicios{
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #1a1a1a;
+    text-align: center;
+}
+#nuestros-servicios .container{
+    padding: 50px 12px;
+    margin-bottom: 2%;
+}
+#nuestros-servicios h2{
+    margin-top: 1%;
+    font-size: 3.2em;
+    color: #223344;
+    text-align: center;
+}
+#nuestros-servicios p{
+    display: none;
+    text-align: center;
+}
+#nuestros-servicios .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    margin-top: 0;
+    border-radius: 15px;  
+    color: white;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/embebidos2.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/iot2.jpg");    
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/pcb2.jpg");    
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 720px){
+
+/* --------------------------HEADER-------------------------------------------------------------------------------------- */  
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+
+
+
+
+        #nuestros-servicios{
+    background-color: rgba(245,245,245);
+    color: white;
+    text-align: center;
+    }
+
+    #nuestros-servicios .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-servicios p{
+        display: block;
+        margin-top: 8vw;
+ 
+    }
+
+    #nuestros-servicios h2{
+        color: #223344;
+    }
+
+    #nuestros-servicios h3{
+        margin-top: 5%;
+    }
+
+    #nuestros-servicios .carta{
+        padding: 45px;
+        background-size: 100% 170px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50, 50, 50, 1);
+        box-shadow: 5px 2px 10px rgba(0,0,0,0.5);
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        position: relative;
+        z-index: 1; /* Bajo */
+    }  
+
+
+    #nuestros-servicios .carta:hover {
+    background-size: 110% 180px; /* Zoom al fondo */
+    transform: translateY(-10px); /* Eleva la carta */
+    box-shadow: 10px 5px 20px rgba(0,0,0,0.7); /* Más sombra */
+    filter: brightness(1.1); /* Aumenta brillo */
+    }
+    
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/embebidos2.jpg");
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/iot2.jpg");    
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/pcb2.jpg");    
+    }    
+
+
+
+    
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+
+}
+
+
+
+
+@media (max-width: 720px) {
+
+    .menu-toggle {
+      display: block;
+    }
+/* --------------------------HEADER-------------------------------------------------------------------------------------- */  
+  header nav {
+    position: relative;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #000;
+    display: flex;
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+  }
+
+  header nav.show {
+    display: flex;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+    padding: 3px 20px;
+  }
+
+  header {
+  background-color: #121212;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  }
+}
+
+
+/*----PORTADA-------------------------------------------------------------------------------------------------------- */
+  #hero h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 0.8em 0 0.4em 0; /* margen arriba más pequeño, y menor entre h1 y el botón */
+    color: white;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+    #hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction:column;
+    height: 80vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/embebidos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
+ 
+    #hero h1{
+    font-size: 4em;
+    color: white;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    padding-bottom: 3%;
+    }
+
+    #hero button {
+        font-size: 1.85em;
+        animation: fadeInUp 0.6s ease-out forwards;
+        animation-delay: 0.6s;
+        opacity: 0;
+     
+    }
+ 
+
+    button hero{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    color:white;
+    background-color: #00aced;
+    }
+    
+ 
+
+/* Fondo degradado oscuro */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #1a1a1a, #2c2c2c);
+  color: white;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  display: none;
+}
+
+ 
+
+ 
+ 
+/* Animación de aparición con desvanecimiento y desplazamiento */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.github-link {
+  display: inline-block;
+  background-color: #24292e;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.github-link i {
+  margin-right: 8px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.github-link:hover {
+  background-color: #444;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-btn {
+  display: inline-block;
+  background-color: #24292e;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+
+
+
+#contacto {
+  background: linear-gradient(to right, #1e1e2f, #3a0ca3); /* gris violáceo → violeta oscuro */
+  color: #fff;
+  padding: 90px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: #00aced;
+}
+
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contacto-item {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.contacto-item:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.02);
+  border-color: #00aced;
+}
+
+.contacto-item i {
+  font-size: 1.5em;
+  color: #00aced;
+  min-width: 30px;
+}
+
+.contacto-item a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacto-item a:hover {
+  color: #00aced;
+}
+
+
+
+
+footer {
+  background-color: #000; /* Negro como Contacto */
+  color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6); /* Sombra superior */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
+
+
+
+/* Para que el footer se mantenga abajo si el contenido es poco */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Esto hace que el <main> ocupe todo el espacio restante */
+}
+
+
+/* CENTRAR TARJETAS EN VISTA MÓVIL */
+@media (max-width: 768px) {
+  .programas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carta {
+    width: 90%;
+    max-width: 100%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 720px) {
+  #hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 1.5em; /* <-- Agrega esta línea */
+  }
+    .section-title {
+    font-size: 2.4em;
+    margin-bottom: 0em; /* También puedes ajustar esto si quieres */
+    }
+
+
+}
+
+
+/* ==== Ajuste de proporción y alineación de textos en cartas ==== */
+#nuestros-servicios .carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* alineación superior */
+  align-items: center;
+  text-align: center;
+  min-height: 420px; /* altura uniforme */
+}
+
+#nuestros-servicios .carta h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#nuestros-servicios .carta p {
+  font-size: 1.05em;
+  line-height: 1.6em;
+  margin-top: auto;   /* hace que el párrafo siempre quede alineado */
+}
+ 
+
+/* Estilos específicos para el ítem de GitHub */
+.contacto-item.github-item {
+    background-color: #24292e; /* Color de fondo de GitHub */
+}
+
+.contacto-item.github-item:hover {
+    background-color: #2f363d; /* Color de hover de GitHub */
+    border-color: #f9826c; /* Color de acento de GitHub */
+}
+
+.contacto-item.github-item i {
+    color: #f9826c; /* Color del icono de GitHub */
+}
+
+.contacto-item.github-item a:hover {
+    color: #f9826c; /* Color de hover para el enlace */
+}
+
+
+ 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">Paul Ramirez</p>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+            <nav id="nav">
+                <a href="index.html#hero">Home</a>
+                <a href="proyectos.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="index.html#contacto" class="contacto-btn">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Embedded Systems <br> Engineering</h1>
+            <a href="proyectos.html"><button>Explore</button></a>
+        </section>
+    </main>
+    
+    <section id="nuestros-servicios">
+        <h1 class="section-title">Technological Solutions</h1>
+        <div class="container">
+            <div class="programas">
+                <div class="carta hidden">
+                    <h3>Firmware Development</h3>
+                    <p>Microcontroller programming for real-time applications, communication protocols (UART, SPI, I2C, CAN, Ethernet),
+                         device control and signal processing.  </p>
+                </div>
+
+                <div class="carta hidden">
+                    <h3>IoT Projects</h3>
+                    <p>Design of connected solutions for industrial, home automation and remote monitoring applications. Integration of sensors, wireless communication modules and cloud platforms.</p>
+                </div>
+
+                <div class="carta hidden">
+                    <h3>PCB Design</h3>
+                    <p>Development of optimized printed circuits for prototypes and production, complying with quality standards and design best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contact</h2>
+        <div class="contacto-container">
+            <div class="contacto-item hidden">
+                <i class="fas fa-city"></i>
+                <span>Toulouse, France</span>
+            </div>
+            <div class="contacto-item hidden">
+                <i class="fas fa-envelope"></i>
+                <span>polram278@gmail.com</span>
+            </div>
+            <div class="contacto-item hidden">
+                <i class="fas fa-phone"></i>
+                <span>+33 6 4141 3180</span>
+            </div>
+            <div class="contacto-item hidden">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/polram/" target="_blank">linkedin.com/in/polram</a>
+            </div>
+            <div class="contacto-item hidden">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/Pol-Ram" target="_blank">github.com/Pol-Ram</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Polram 2025 — All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // === Card scroll animation ===
+            const cartas = document.querySelectorAll('.carta');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); // optional: only once
+                    }
+                });
+            }, {
+                threshold: 0.2 // Triggers when 20% of element is visible
+            });
+
+            cartas.forEach(carta => {
+                observer.observe(carta);
+            });
+
+            // === Contact elements scroll animation ===
+            const elementosContacto = document.querySelectorAll('#contacto .contacto-item');
+            const contactoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show'); // Reset when leaving
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            elementosContacto.forEach(elem => {
+                contactoObserver.observe(elem);
+            });
+        });
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>

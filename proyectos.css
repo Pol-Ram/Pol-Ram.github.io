@@ -1,0 +1,529 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+}
+
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{font-size: 1.25em;}
+
+button{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    color:white;
+    background-color: #00aced;
+
+
+}
+
+button:hover{
+    background-color: #227a9b;
+}
+
+
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+.color-acento{color: #00aced;}
+
+/* --------------------------HEADER-------------------------------------------------------------------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  position: sticky;
+  padding: 2px 0;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .logo {
+  font-size: large;
+  font-weight: bold;
+  color: #00aced;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* igual para todos */
+  padding: 0 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+header nav a:hover {
+  color: #00aced;
+}
+
+/* Botón especial "Contacto" */
+header nav .contacto-btn {
+  background-color: #00aced;
+  color: #000;
+}
+
+header nav .contacto-btn:hover {
+  background-color: #008bb9;
+  color: #fff;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 720px){
+
+/* --------------------------HEADER-------------------------------------------------------------------------------------- */  
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+
+    
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+
+}
+
+
+
+
+@media (max-width: 720px) {
+
+    .menu-toggle {
+      display: block;
+    }
+/* --------------------------HEADER-------------------------------------------------------------------------------------- */  
+  header nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #000;
+    display: none;
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+  }
+
+  header nav.show {
+    display: flex;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+    padding: 3px 20px;
+  }
+
+  header {
+  background-color: #121212;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  }
+}
+
+
+
+/* Fondo degradado oscuro */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #1a1a1a, #2c2c2c);
+  color: white;
+}
+
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  display: none;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 2.5em 0;
+  margin-bottom: 3%;
+}
+
+.subnav {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.subnav button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  margin: 0.5em 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.subnav button.active, .subnav button:hover {
+  background: #00bfff;
+}
+
+.project-section {
+  display: none;
+  flex-direction: column;
+  gap: 4.5em;
+  padding: 1em;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.project-left, .project-right {
+  flex: 1 1 45%;
+}
+
+
+
+
+
+.project-video {
+  width: 100%;         /* Se adapta al contenedor */
+  max-width: 1200px;    /* Tamaño máximo del video */
+  aspect-ratio: 16 / 9; /* Mantiene proporción horizontal */
+  display: block;      /* Evita espacios abajo */
+  border-radius: 8px;  /* Opcional: bordes redondeados */
+}
+
+.project-right {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente si tiene altura */
+  max-width: 100%;         /* O un valor fijo, como 400px */
+}
+
+@media (max-width: 768px) {
+  .project-video {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+ 
+
+
+
+.project img, .project video {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.project img:hover, .project video:hover {
+  transform: scale(1.02);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+
+
+
+.gallery_2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  max-width: 400px; /* controla el tamaño total */
+  margin: auto;     /* centra el contenedor en la página */
+}
+
+.gallery_2 img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* más ancho que alto */
+  object-fit: cover; /* recorta si es necesario */
+  display: block;
+}
+
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.github-link {
+  display: inline-block;
+  background-color: #24292e;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.github-link i {
+  margin-right: 8px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.github-link:hover {
+  background-color: #444;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-btn {
+  display: inline-block;
+  background-color: #2e343b;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+
+footer {
+  background-color: #000; /* Negro como Contacto */
+  color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6); /* Sombra superior */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
+
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project-left {
+    order: 1;
+  }
+
+  .project-right {
+    order: 2;
+  }
+}
+
+
+
+
+
+
+
+.project-links {
+  margin-top: 35px;
+  text-align: center; /* Centrar horizontalmente */
+}
+
+.project-btn {
+  display: inline-block;
+}
+
+
+.project-btn:hover {
+  background-color: #0366d6; /* Azul de GitHub */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Fondo oscuro para zoom */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Imagen ampliada */
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* Botón de cierre */
+#lightbox .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+

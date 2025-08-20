@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Paul Ramirez</title>
+  <link rel="stylesheet" href="proyectos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <p class="logo">Paul Ramirez</p>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars" id="menu-icon"></i>
+      </button>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="proyectos.html">Projects</a>
+        <a href="about.html">About Me</a>
+        <a href="index.html#contacto" class="contacto-btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="section-title">Projects</h1>
+
+    <div class="subnav">
+      <button class="active" onclick="showSection('micro')">Microcontroller</button>
+      <button onclick="showSection('fpga')">FPGA</button>
+      <button onclick="showSection('plc')">PLC</button>
+    </div>
+
+    <!-- MICROCONTROLLER -->
+    <div id="micro" class="project-section" style="display:flex">
+      
+      <!-- Micro Project 1 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>CAN BUS Communication in STM32</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>In the telemetry team for the electric Formula Student vehicle, we needed bidirectional communication between two MCUs</li>
+            <li>The challenge was to synchronize sensor data (speed, temperature, humidity, etc.) in real-time with low power consumption</li>
+            <li>I implemented a CAN FD bus to establish communication between two STM32H7 boards</li>
+            <li>Achieved stable transmission at 500 kbps with -1% data loss, crucial for dynamic testing</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://github.com/Pol-Ram/CAN-FD-BUS---STM32H7" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="https://tu-enlace-video.com" target="_blank" class="project-btn">
+              <i class="fas fa-video"></i> Watch Video
+            </a>
+            <a href="https://tu-enlace-reporte.com" target="_blank" class="project-btn">
+              <i class="fas fa-file-alt"></i> View Report
+            </a>
+          </p>
+        </div>
+        <div class="project-right">
+          <div class="gallery">
+            <img src="media/arduino.jpg" alt="">
+            <img src="media/stm32.png" alt="">
+            <img src="media/stm32_2.jpg" alt="">
+            <img src="media/stm32_3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Micro Project 2 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>RFID Access Control System with PIC18F8722</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>During the microcontroller lab, the challenge was to design an access control system using a PIC18F8722 microcontroller</li>
+            <li>The goal was to design and implement a system that could read RFID codes from a badge and control a servo motor simulating door opening/closing</li>
+            <li>I established USART communication with an RFID reader to receive badge codes and designed a timing routine to automatically close the door</li>   
+            <li>The system worked reliably, correctly validating authorized badges and operating the servo motor without errors</li>
+          </ul>
+   
+            <p class="project-links">
+            <a href="https://github.com/Pol-Ram/RFID-Access-Control---PIC18F8722" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            </p>
+
+        </div>
+        <div class="project-right">
+          <div class="gallery_2">
+            <img src="media/proy2_2.jpg" alt="">
+            <img src="media/proy2_1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FPGA -->
+    <div id="fpga" class="project-section">
+      <!-- FPGA Project 1 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>Frequency Meter</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>Final project for Digital Systems course: implement a practical FPGA system integrating multiple VHDL modules</li>
+            <li>Design a frequency meter capable of measuring signals between 1 Hz and 10 MHz, displaying values on a 7-segment display with 1-second refresh rate</li>
+            <li>Designed an edge detector for counting input pulses via state machine. Created 1 Hz reference signal using clock dividers. Developed a synchronized counter to obtain frequency. Encoded binary data to BCD format for 7-segment display</li>   
+            <li>The meter measured frequencies in real-time with 1s refresh rate and adequate precision. Validated using function generator and display readings</li>
+          </ul>
+            <p class="project-links">
+            <a href="https://github.com/Pol-Ram/Frequecy-Meter---FPGA" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            </p>
+        </div>
+        <div class="project-right">
+          <video class="project-video" controls>
+            <source src="media/freq.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- FPGA Project 2 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>Digital High-Pass Filter</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>For Front-End Acquisition course: design digital acquisition system for optical sensor using FPGA</li>
+            <li>Implement first-order high-pass digital filter to remove low-frequency noise, processing real-time data from FPGA's ADC</li>
+            <li>Designed filter's mathematical function, discretized and programmed in VHDL with delay handling. Integrated module with ADC and validated using ramp and sawtooth signals</li>   
+            <li>Filter effectively removed low frequencies, producing clean square wave output. System worked in real-time with low logic resource usage</li>
+          </ul>
+            <p class="project-links">
+            <a href="https://github.com/Pol-Ram/Digital-HighPass-Filter---FPGA" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            </p>
+        </div>
+        <div class="project-right">
+          <img src="media/filter.png" alt="">
+        </div>
+      </div>
+
+      <!-- FPGA Project 3 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>Button Debounce Filter</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>Mechanical button produced bouncing causing multiple unwanted activations in FPGA system</li>
+            <li>Task was to implement digital filter ensuring single activation per press</li>
+            <li>Designed VHDL FSM combined with counter to measure signal stability time before validation. Tested in simulation and hardware using Vivado</li>   
+            <li>Achieved complete bounce elimination with validation after 20ms, low logic resource usage and stable system operation</li>
+          </ul>
+            <p class="project-links">
+            <a href="https://github.com/Pol-Ram/Button-Debounce-Filter---FPGA" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            </p>
+        </div>
+        <div class="project-right">
+          <img src="media/antibounce.png" alt="">
+        </div>
+      </div>
+
+      <!-- FPGA Project 4 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>Display Control</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>Development of VHDL module to control 7-segment display on FPGA using switches as inputs</li>
+            <li>Objective was to implement binary to 7-segment decoder in VHDL</li>
+            <li>Designed VHDL module with 4-bit input and 7-bit output (segments). Assigned FPGA switches to inputs via pin constraints. Simulated and validated hardware operation</li>   
+            <li>Functional display controlled by switches. Modular code ready for integration in complex systems (counters, clocks, etc.)</li>
+          </ul>
+            <p class="project-links">
+            <a href="https://github.com/Pol-Ram/Display-Control---FPGA" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            </p>
+        </div>
+        <div class="project-right">
+          <img src="media/Display control.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- PLC -->
+    <div id="plc" class="project-section">
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>Design and Implementation of Vertical Grain Packaging Machine - Thesis Project</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>For my mechatronics engineering thesis, I undertook the complete design of a vertical packaging machine for granular products, focusing on industrial automation and mechanical manufacturing</li>
+            <li>Task was to develop a functional machine from scratch, including mechanical design, control system programming, HMI designed in LabVIEW, and integration of pneumatic actuators, motors and thermal systems</li>
+            <li>Together with my colleague André Cuvi, we designed and manufactured all mechanical components. Programmed a Delta DVP-ES2 PLC to control pneumatic cylinders, sealing heaters, three-phase dosing motor, and plastic feeding system using stepper motor with frequency drive. Implemented automatic forming, filling and sealing routines</li>   
+            <li>Machine operated automatically and stably, achieving precise and repeatable packaging. Project successfully integrated mechanical design, electrical control and automation, demonstrating complete industrial solution</li>
+          </ul>
+            <p class="project-links">
+            <a href="https://repositoriobe.espe.edu.ec/server/api/core/bitstreams/fcde0301-e760-40a8-8410-bb2ba67ac634/content" target="_blank" class="project-btn">
+              <i class="fas fa-file-alt"></i> View Report
+            </a>
+            </p>
+        </div>
+        <div class="project-right">
+          <video class="project-video" controls>
+            <source src="media/tesis.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; Polram 2025 — All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="proyectos.js"></script>
+
+  <div id="lightbox">
+    <span class="close-btn">&times;</span>
+    <img src="" alt="Zoom">
+  </div>
+</body>
+</html>
