@@ -35,13 +35,35 @@
 
     <!-- MICROCONTROLLER -->
     <div id="micro" class="project-section" style="display:flex">
-      
+
+            <!-- Micro Project 0 -->
+      <div class="project fade-in">
+        <div class="project-left">
+          <h2>Race Car Display in Python | Raspberry Pi and STM32</h2>
+          <ul style="list-style: disc; padding-left: 20px;">
+            <li>Our Formula Student team needed a way to visualize real-time sensor data from the race car</li>
+            <li>I was in charge of building a display system to receive STM32 data and present it clearly</li>
+            <li>I developed a Python GUI on a Raspberry Pi, using UART communication with the STM32. I implemented data parsing and designed the interface for real-time updates of key parameters</li>
+            <li>The system successfully delivered real-time info, improving driver awareness and helping the team monitor vehicle performance during tests</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://github.com/Pol-Ram/GUI-Python-Formula-Student---Raspberry-Pi" target="_blank" class="project-btn">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </p>
+        </div>
+        <div class="project-right">
+            <img src="media/GUI.jpeg" alt="">
+        </div>
+      </div>
+
+
       <!-- Micro Project 1 -->
       <div class="project fade-in">
         <div class="project-left">
           <h2>CAN BUS Communication in STM32</h2>
           <ul style="list-style: disc; padding-left: 20px;">
-            <li>In the telemetry team for the electric Formula Student vehicle, we needed bidirectional communication between two MCUs</li>
+            <li>In the data team for the electric Formula Student vehicle, we needed communication between two MCUs</li>
             <li>The challenge was to synchronize sensor data (speed, temperature, humidity, etc.) in real-time with low power consumption</li>
             <li>I implemented a CAN FD bus to establish communication between two STM32H7 boards</li>
             <li>Achieved stable transmission at 500 kbps with -1% data loss, crucial for dynamic testing</li>
@@ -63,12 +85,7 @@
           </p>
         </div>
         <div class="project-right">
-          <div class="gallery">
-            <img src="media/SMT32CAN_V.jpg" alt="">
-            <img src="media/stm32.png" alt="">
-            <img src="media/stm32_2.jpg" alt="">
-            <img src="media/stm32_3.jpg" alt="">
-          </div>
+            <img src="media/stm32_CAN FD.png" alt="">
         </div>
       </div>
 

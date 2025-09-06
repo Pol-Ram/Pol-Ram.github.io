@@ -309,7 +309,7 @@ nav a:hover {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente si tiene altura */
-  max-width: 100%;         /* O un valor fijo, como 400px */
+  max-width: 40%;         /* O un valor fijo, como 400px */
 }
 
 @media (max-width: 768px) {
